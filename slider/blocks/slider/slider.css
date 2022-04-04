@@ -1,0 +1,6 @@
+.slider {
+    display: flex;
+    max-width: 60%;
+    margin: 20px auto;
+    overflow: hidden;
+}

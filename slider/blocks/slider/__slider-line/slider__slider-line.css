@@ -1,0 +1,6 @@
+.slider__slider-line {
+    max-height: 60vh;
+    display: flex;
+    position: relative;
+    left: 0;
+}
