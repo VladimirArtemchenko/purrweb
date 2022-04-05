@@ -1,0 +1,26 @@
+.caption_place_lead {
+    font-family: 'Montserrat';
+    margin: 76px 0 15px 102px;
+    grid-area: caption;
+}
+
+@media screen and (max-width: 960px) {
+    .caption_place_lead {
+        margin-left: calc(100% - 380px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .caption_place_lead {
+        font-size: 24px;
+        line-height: 29px;
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .caption_place_lead {
+        justify-self: start;
+        margin: 57px 0 15px calc(100% - 299px);
+    }
+}

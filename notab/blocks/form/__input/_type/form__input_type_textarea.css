@@ -1,0 +1,12 @@
+.form__input_type_textarea {
+    min-height: 199px;
+    resize: none;
+    padding: 29px 0 0 23px;
+}
+
+@media screen and (max-width: 868px) {
+    .form__input_type_textarea {
+        min-height: 140px;
+        padding: 18px 0 0 11px;
+    }
+}

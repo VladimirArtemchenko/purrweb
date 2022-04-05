@@ -1,0 +1,18 @@
+.eclipse_position_footer {
+    width: 406px;
+    height: 412px;
+    left: -39px;
+    top: 313px;
+    transform: rotate(5.78deg);
+    border-radius: 0;
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 767px) {
+    .eclipse_position_footer {
+        left: -101px;
+        top: 325px;
+        width: 224px;
+        height: 227px;
+    }
+}

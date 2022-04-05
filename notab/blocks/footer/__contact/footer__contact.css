@@ -1,0 +1,12 @@
+.footer__contact {
+    max-width: 171px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+    .footer__contact {
+        align-items: center;
+        max-width: 209px;
+    }
+}

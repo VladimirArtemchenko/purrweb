@@ -1,0 +1,13 @@
+.header__cube {
+    height: 107px;
+    width: 109px;
+    margin: 23px 0 18px 85px;
+}
+
+@media screen and (max-width: 767px) {
+    .header__cube {
+        height: 53px;
+        width: 52px;
+        margin: 40px 0 4px 15px;
+    }
+}

@@ -1,0 +1,5 @@
+@media screen and (max-width: 767px) {
+    .longscroll__title {
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,11 @@
+.eclipse_position_bi-tool {
+    width: 426px;
+    height: 438px;
+    left: -90px;
+    top: 194px;
+}
+@media screen and (max-width: 767px) {
+    .eclipse_position_bi-tool {
+        display: none;
+    }
+}

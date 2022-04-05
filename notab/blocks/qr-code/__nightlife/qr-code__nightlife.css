@@ -1,0 +1,17 @@
+.qr-code__nightlife {
+    background: url(../../../images/qr-code-nightlife-logo.svg) no-repeat;
+    width: 137px;
+    height: 54px;
+    position: absolute;
+    top: 1px;
+    left: calc(100% - 239px);
+    transform: rotate(-12.84deg);
+}
+
+@media screen and (max-width: 767px) {
+    .qr-code__nightlife {
+        background: url(../../../images/Nightlife-mobile.svg) no-repeat;
+        top: 724px;
+        left: 36px;
+    }
+}

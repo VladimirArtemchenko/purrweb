@@ -1,0 +1,12 @@
+.header__login-logo {
+    z-index: 2;
+    height: 25px;
+    width: 26px;
+    margin: 69px 0 0 108px;
+}
+
+@media screen and (max-width: 767px) {
+    .header__login-logo {
+        display: none;
+    }
+}

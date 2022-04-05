@@ -1,0 +1,15 @@
+.wrapper_place_generate-qr-code {
+    max-width: 617px;
+    justify-content: end;
+    gap: 51px;
+    margin: 0 0 0 calc(100% - 1138px);
+}
+
+@media screen and (max-width: 1023px) {
+    .wrapper_place_generate-qr-code {
+        margin: 0 auto 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+}

@@ -1,0 +1,23 @@
+.longscroll__message_position_top {
+    align-self: flex-end;
+    padding: 23px 0 0 21px;
+    width: 267px;
+    height: 99px;
+    margin: 204px 126px 0 0;
+}
+
+@media screen and (max-width: 1023px) {
+    .longscroll__message_position_top {
+        margin: 204px 50px 0 0;
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .longscroll__message_position_top {
+        margin: 32px 0 0 189px;
+        padding: 15px 0 0 18px;
+        width: 171px;
+        height: 62px;
+        grid-area: top;
+    }
+}

@@ -1,0 +1,15 @@
+.bi-tool__container {
+    max-width: 728px;
+    max-height: 527px;
+    margin: 205px 115px 115px 25px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+@media screen and (max-width: 767px) {
+    .bi-tool__container {
+        margin: 0 0 35px 0;
+    }
+}

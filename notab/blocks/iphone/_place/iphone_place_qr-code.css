@@ -1,0 +1,31 @@
+.iphone_place_qr-code {
+    margin: 220px 80px 0 0;
+    background: -1px 3px url(../../../images/qr-code-iphone-1.png) no-repeat;
+}
+
+.iphone_place_qr-code:nth-of-type(2) {
+    margin: 561px 0 0 0;
+    background: 1px 3px url(../../../images/qr-code-iphone2.png) no-repeat;
+}
+
+@media screen and (max-width: 1279px) {
+    .iphone_place_qr-code {
+        margin: 220px 20px 0 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .iphone_place_qr-code {
+        margin: 230px 0 0 0;
+        width: 280.98px;
+        height: 563.68px;
+        background-size: 100%;
+    }
+
+    .iphone_place_qr-code:nth-of-type(2) {
+        margin: 50px 0 0 0;
+        width: 280.98px;
+        height: 563.68px;
+        background-size: 100%;
+    }
+}

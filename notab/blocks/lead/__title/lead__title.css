@@ -1,0 +1,32 @@
+.lead__title {
+    z-index: 2;
+    font-family: 'montserrat';
+    min-width: 643px;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 70px;
+    color: white;
+    margin: 127px 0 0 103px;
+    grid-area: title;
+}
+
+@media screen and (max-width: 1290px) {
+    .lead__title {
+        min-width: 0px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .lead__title {
+        margin-left: calc(100% - 364px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .lead__title {
+        font-size: 35px;
+        line-height: 40px;
+        margin: 95px 0 0 13px;
+        width: 207px;
+    }
+}

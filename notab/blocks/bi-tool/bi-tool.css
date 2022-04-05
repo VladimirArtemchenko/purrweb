@@ -1,0 +1,21 @@
+.bi-tool {
+    overflow: hidden;
+    position: relative;
+    min-height: 1020px;
+    box-sizing: border-box;
+    display: flex;
+    padding: 70px 0 0 100px;
+}
+
+@media screen and (max-width: 1023px) {
+    .bi-tool {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 767px) {
+    .bi-tool{
+        min-height: 0;
+        max-height: 584px;
+        padding: 0;
+    }
+}

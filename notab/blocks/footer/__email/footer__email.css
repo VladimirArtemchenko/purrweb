@@ -1,0 +1,17 @@
+.footer__email {
+    margin: 16px 0 19px 0;
+    font-family: 'Avenir';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 767px) {
+    .footer__email {
+        text-align: center;
+        margin: 17px 0 9px 0;
+        font-size: 14px;
+        line-height: 19px;
+    }
+}

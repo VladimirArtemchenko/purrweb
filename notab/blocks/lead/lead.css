@@ -1,0 +1,27 @@
+.lead {
+    overflow: hidden;
+    margin: -148px 0 0 0;
+    padding: 148px 0 0 0;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "title iphone"
+        "subtitle iphone"
+        ". iphone"
+        "caption stores";
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 767px) {
+    .lead {
+        grid-template-areas:
+            "title iphone"
+            "subtitle iphone"
+            ". iphone"
+            "caption caption"
+            "stores stores";
+        grid-template-columns: 3fr 3fr 1fr;
+    }
+}

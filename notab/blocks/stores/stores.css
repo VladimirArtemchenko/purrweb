@@ -1,0 +1,16 @@
+.stores {
+    grid-area: stores;
+    max-width: 376px;
+    display: flex;
+    gap: 28px;
+}
+@media screen and (max-width: 767px) {
+    .stores {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 24px;
+        min-width: 195px;
+        
+}
+}

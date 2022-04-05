@@ -1,0 +1,25 @@
+.iphone_place_lead {
+    margin: 0 0 0 180px;
+    background: url(../../../images/iphone-2.png);
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 1290px) {
+    .iphone_place_lead {
+        margin: 0 0 0 calc(100% - 382px);
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .iphone_place_lead {
+        margin: 0 0 0 calc(100% - 348px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .iphone_place_lead {
+        margin: 59px 0 0 calc(100% - 75px);
+        background: 0px 2px url(../../../images/iphone-mobile.png) no-repeat;
+        border-radius: 20px;
+    }
+}

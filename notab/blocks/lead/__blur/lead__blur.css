@@ -1,0 +1,23 @@
+.lead__blur {
+    width: 662px;
+    height: 783px;
+    left: calc(100% - 646px);
+    top: -76px;
+    position: absolute;
+    background-image: url(../../../images/lead-blur.svg);
+    filter: blur(100px);
+    background-position: center;
+    transform: rotate(-105.26deg);
+}
+
+
+@media screen and (max-width: 767px) {
+    .lead__blur {
+        width: 363px;
+        height: 474px;
+        background-image: url(../../../images/lead-blur-mobille.svg);
+        left: 124px;
+        top: 103px;
+        transform: rotate(90.69deg);
+    }
+}

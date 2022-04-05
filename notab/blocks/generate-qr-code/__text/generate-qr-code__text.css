@@ -1,0 +1,32 @@
+.generate-qr-code__text {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    background: 0 0 url(../../../images/generate-qr-code-arrow.svg) no-repeat;
+    min-width: 232px;
+    height: 114px;
+    margin: 241px 0 0 0;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 1023px) {
+    .generate-qr-code__text {
+        background: 90% 0px url(../../../images/Arrow-mobile.svg) no-repeat;
+        margin: -80px 0px 0 250px;
+        height: 140px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .generate-qr-code__text {
+        background: 96% 2px url(../../../images/Arrow-mobile.svg) no-repeat;
+        margin: -55px 0 0 77px;
+        height: 140px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

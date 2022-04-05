@@ -1,0 +1,16 @@
+.caption_place_footer {
+    max-width: 270px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+
+@media screen and (max-width: 540px) {
+    .caption_place_footer {
+        font-size: 24px;
+        line-height: 33px;
+        max-width: 320px;
+    }
+}

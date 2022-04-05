@@ -1,0 +1,15 @@
+.eclipse_position_mission {
+    width: 85px;
+    height: 85px;
+    left: calc(100% - 239px);
+    top: 243px;
+    background: rgba(241, 1, 191, 0.7);
+    filter: blur(50px);
+    opacity: 0.7;
+}
+@media screen and (max-width: 767px) {
+    .eclipse_position_mission {
+        left: -4px;
+        top: 82px;
+    }
+}

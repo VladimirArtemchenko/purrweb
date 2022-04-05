@@ -1,0 +1,12 @@
+.stores__google-play_size_big {
+    width: 292px;
+    height: 81px;
+}
+
+@media screen and (max-width: 767px) {
+    .stores__google-play_size_big {
+        width: 185px;
+        height: 60px;
+        object-fit: fill;
+    }
+}

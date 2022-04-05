@@ -1,0 +1,15 @@
+.contact {
+    z-index: 5;
+    padding: 300px 0 0 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+@media screen and (max-width: 868px) {
+    .contact {
+        padding: 300px 0 300px 0;
+    }
+}

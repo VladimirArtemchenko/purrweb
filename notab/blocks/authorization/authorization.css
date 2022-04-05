@@ -1,0 +1,21 @@
+.authorization {
+    display: flex;
+    justify-content: space-between;
+    padding: 61px 177px 0;
+    margin-bottom: -100px;
+
+}
+
+@media screen and (max-width: 1439px) {
+    .authorization {
+        padding: 61px calc((100% - 1068px)/2) 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .authorization {
+        flex-direction: column;
+        gap: 30px;
+        padding: 70px calc((100% - 345px)/2) 0;
+    }
+}

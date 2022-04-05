@@ -1,0 +1,18 @@
+.notab {
+    z-index: 0;
+    margin: 0 0 -300px 0;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -20px;
+    max-width: 1440px;
+    min-height: 1006px;
+    background: 0 -50px url(../../images/notab-gradient.svg);
+}
+
+@media screen and (max-width: 1023px) {
+    .notab {
+        display: none;
+    }
+}

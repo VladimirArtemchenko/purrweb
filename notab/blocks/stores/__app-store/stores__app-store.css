@@ -1,0 +1,18 @@
+.stores__app-store {
+    width: 164px;
+    height: 51px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.stores__app-store:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 767px) {
+    .stores__app-store {
+        width: 185px;
+        height: 60px;
+        object-fit: fill;
+}
+}

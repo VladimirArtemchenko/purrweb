@@ -1,0 +1,18 @@
+.stores__google-play {
+    width: 185px;
+    height: 51px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.stores__google-play:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 767px) {
+    .stores__google-play {
+        width: 185px;
+        height: 60px;
+        object-fit: fill;
+    }
+}

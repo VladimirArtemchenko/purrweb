@@ -1,0 +1,20 @@
+.longscroll__description {
+    max-width: 421px;
+    margin: 192px 160px 0 0;
+    align-self: flex-end;
+}
+
+@media screen and (max-width: 1439px) {
+    .longscroll__description {
+        min-width: 0;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .longscroll__description {
+        max-width: 340px;
+        margin: 116px 0 0 15px;
+        align-self: flex-start;
+    }
+}

@@ -1,0 +1,16 @@
+.bi-tool__description {
+    min-width: 497px;
+    margin: 294px 0 0 0;
+}
+
+@media screen and (max-width: 1439px) {
+    .bi-tool__description {
+        min-width: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .bi-tool__description {
+        margin: 143px 15px 30px;
+    }
+}

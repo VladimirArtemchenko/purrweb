@@ -1,0 +1,23 @@
+.iphone_place_id-scanner {
+    margin: 0 50px -70px 0;
+    background: center/100% url(../../../images/id-scanner-iphone-1.png) no-repeat;
+}
+
+.iphone_place_id-scanner:nth-of-type(2) {
+    margin-right: 0;
+    background: center/100% url(../../../images/id-scanner-iphone-2.png) no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+    .iphone_place_id-scanner {
+        width: 287.08px;
+        height: 575.93px;
+        margin: 56px auto 55px;
+
+    }
+
+    .iphone_place_id-scanner:nth-of-type(2) {
+        margin: 0 auto 0;
+
+    }
+}

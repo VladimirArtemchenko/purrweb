@@ -1,0 +1,17 @@
+.lead__line {
+    z-index: -1;
+    width: 140px;
+    height: 4px;
+    z-index: 10;
+    position: absolute;
+    top: 562px;
+    left: 72px;
+    background-color: white;
+    transform: rotate(120.61deg);
+}
+
+@media screen and (max-width: 960px) {
+    .lead__line {
+        visibility: hidden;
+    }
+}

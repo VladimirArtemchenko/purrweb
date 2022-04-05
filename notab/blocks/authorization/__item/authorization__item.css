@@ -1,0 +1,22 @@
+.authorization__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 22px;
+    width: 503px;
+    height: 312px;
+    box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 767px) {
+    .authorization__item {
+        width: 345px;
+        height: 233px;
+    }
+
+    .authorization__item:nth-of-type(2) {
+        height: 167px;
+    }
+}

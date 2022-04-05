@@ -1,0 +1,13 @@
+.mission {
+    padding-top: 100px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+    .mission {
+        flex-direction: column-reverse;
+    }
+}

@@ -1,0 +1,23 @@
+.mission__description {
+    z-index: 1;
+    margin: 236px 163px 469px 0;
+    max-width: 358px;
+}
+
+@media screen and (max-width: 1439px) {
+    .mission__description {
+        margin: 236px calc(100% - 1280px) 469px 0;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .mission__description {
+        margin: 236px 20px 469px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mission__description {
+        margin: 110px 0 163px 15px;
+    }
+}

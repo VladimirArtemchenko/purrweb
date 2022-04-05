@@ -1,0 +1,33 @@
+.form__input {
+    width: 818px;
+    height: 83px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid #5C5C5C;
+    padding: 0 0 0 23px;
+}
+
+.form__input::placeholder {
+    display: flex;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #BFBFBF;
+}
+
+.form__input:invalid {
+    border: 2px solid #FF0000;
+}
+
+@media screen and (max-width: 868px) {
+    .form__input {
+        width: 345px;
+        height: 57px;
+        padding: 0 0 0 11px;
+    }
+
+    .form__input::placeholder {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

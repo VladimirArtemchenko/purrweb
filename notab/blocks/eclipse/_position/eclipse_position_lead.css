@@ -1,0 +1,19 @@
+.eclipse_position_lead {
+    z-index: -1;
+    width: 125px;
+    height: 125px;
+    left: 93px;
+    top: 468px;
+    background: rgba(96, 92, 234, 0.5);
+    filter: blur(50px);
+    transform: rotate(0deg);
+}
+
+@media screen and (max-width: 767px) {
+    .eclipse_position_lead {
+        width: 74px;
+        height: 74px;
+        left: -4px;
+        top: 68px;
+    }
+}

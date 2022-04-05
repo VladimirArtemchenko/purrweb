@@ -1,0 +1,24 @@
+.iphone_place_mission {
+    z-index: 10;
+    width: 498px;
+    height: 999.08px;
+    transform: rotate(90deg);
+    background: center/100% url(../../../images/iphone-2.png) no-repeat;
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 1279px) {
+    .iphone_place_mission {
+        margin: 0 0 0 calc(100% - 1279px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .iphone_place_mission {
+        transform: rotate(0deg);
+        width: 172.53px;
+        height: 346.12px;
+        margin: 0 auto 95px;
+        border-radius: 10px;
+    }
+}

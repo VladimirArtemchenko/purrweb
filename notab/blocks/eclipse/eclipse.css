@@ -1,0 +1,8 @@
+.eclipse {
+    z-index: 0;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
+    transform: rotate(5.78deg);
+    filter: blur(170px);
+}

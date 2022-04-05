@@ -1,0 +1,14 @@
+.logo_place_header {
+    height: 25px;
+    width: 96px;
+    margin: 69px 0 0px 8px;
+}
+
+@media screen and (max-width: 767px) {
+    .logo_place_header {
+        height: 12px;
+        width: 46px;
+        margin: 62px 0 0px 0;
+        background: url(../../../images/logo-mobile.svg) no-repeat;
+    }
+}

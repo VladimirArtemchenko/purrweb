@@ -1,0 +1,9 @@
+.qr-code__description {
+    margin: 540px 0px 0 3px;
+}
+
+@media screen and (max-width: 767px) {
+    .qr-code__description {
+        margin: 238px 0px 0 15px;
+    }
+}

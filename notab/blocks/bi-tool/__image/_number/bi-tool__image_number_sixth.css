@@ -1,0 +1,16 @@
+.bi-tool__image_number_sixth {
+    margin: -3px 0 0 3px;
+    grid-column: 6 / 12;
+    grid-row: 16 / 21;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 767px) {
+    .bi-tool__image_number_sixth {
+        width: 129%;
+        height: 114%;
+        grid-column: 8 / 12;
+        grid-row: 5 / 7;
+        margin: -11px 0 0 0px;
+    }
+}

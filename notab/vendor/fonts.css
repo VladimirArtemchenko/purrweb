@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'montserrat';
+    font-weight: 400;
+    src: url("./fonts/montserrat.woff2") format("woff2"),
+        url("./fonts/montserrat.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'montserrat';
+    font-weight: 700;
+    src: url("./fonts/Montserrat-Bold.woff2") format("woff2"),
+        url("./fonts/Montserrat-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'montserrat';
+    font-weight: 900;
+    src: url("./fonts/montserratblack.woff2") format("woff2"),
+        url("./fonts/montserratblack.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-weight: 400;
+    src: url("./fonts/notosans.woff2") format("woff2"),
+        url("./fonts/notosans.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-weight: 700;
+    src: url("./fonts/notosansbold.woff2") format("woff2"),
+        url("./fonts/notosansbold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 500;
+    src: url("./fonts/robotomedium.woff2") format("woff2"),
+        url("./fonts/robotomedium.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Avenir';
+    font-weight: 500;
+    src: url("./fonts/Avenir-Medium.woff2") format("woff2"),
+        url("./fonts/Avenir-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Avenir';
+    font-weight: 800;
+    src: url("./fonts/Avenir-Heavy.woff2") format("woff2"),
+        url("./fonts/Avenir-Heavy.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Avenir';
+    font-weight: 900;
+    src: url("./fonts/Avenir-Black.woff2") format("woff2"),
+        url("./fonts/Avenir-Black.woff") format("woff");
+}

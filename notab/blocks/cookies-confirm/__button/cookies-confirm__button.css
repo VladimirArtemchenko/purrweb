@@ -1,0 +1,23 @@
+.cookies-confirm__button {
+    width: 132px;
+    height: 50px;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid #FFFFFF;
+    border-radius: 6px;
+    margin-right: 24px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.cookies-confirm__button:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 767px) {
+    .cookies-confirm__button {
+        width: 92px;
+        height: 50px;
+        margin-right: 15px;
+    }
+}

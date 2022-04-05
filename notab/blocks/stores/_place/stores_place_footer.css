@@ -1,0 +1,12 @@
+.stores_place_footer {
+    margin: 33px 0 0 0;
+    max-width: 610px;
+    gap: 59px;
+}
+
+@media screen and (max-width: 767px) {
+    .stores_place_footer {
+        margin: 46px 0 0 0;
+        gap: 19px;
+    }
+}

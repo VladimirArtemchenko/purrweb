@@ -1,0 +1,17 @@
+.bi-tool__image_number_seventh {
+    margin: -10px 0 0 -4px;
+    grid-column: 13 / 21;
+    grid-row: 19 / 21;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 767px) {
+    .bi-tool__image_number_seventh {
+        z-index: 0;
+        width: 146%;
+        height: 81%;
+        grid-column: 10 / 21;
+        grid-row: 9 / 12;
+        margin: -27px 0 0 -9px;
+    }
+}

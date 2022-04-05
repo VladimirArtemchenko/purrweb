@@ -1,0 +1,8 @@
+.iphone_place_notab {
+    width: 428.16px;
+    height: 858.94px;
+    transform: rotate(-90deg);
+    margin: 81px 0 0 4px;
+    background: center url(../../../images/notab-dashbord.png) no-repeat,
+        url(../../../images/iphone-notab.png) no-repeat;
+}

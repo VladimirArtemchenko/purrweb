@@ -1,0 +1,16 @@
+.section__title {
+    z-index: 3;
+    margin: 0;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 51px;
+    line-height: 62px;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 767px) {
+    .section__title {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}

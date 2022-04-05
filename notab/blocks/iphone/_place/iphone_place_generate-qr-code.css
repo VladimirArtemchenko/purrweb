@@ -1,0 +1,15 @@
+.iphone_place_generate-qr-code {
+    display: flex;
+    margin: 44px 0px 0 0;
+    background: url(../../../images/iphone-generate-qr-code.png) no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+    .iphone_place_generate-qr-code {
+        background: url(../../../images/iphone-generate-qr-code-mobile.png) no-repeat;
+        width: 181.58px;
+        height: 364.28px;
+        background-size: 100%;
+        margin-top: 0px;
+    }
+}

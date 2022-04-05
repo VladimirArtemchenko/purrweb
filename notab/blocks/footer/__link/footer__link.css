@@ -1,0 +1,22 @@
+.footer__link {
+    text-decoration: none;
+    font-family: 'Avenir';
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: right;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.footer__link:hover {
+    opacity: 0.6;
+}
+
+.footer__link:nth-of-type(1) {
+    font-family: 'Avenir';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+}

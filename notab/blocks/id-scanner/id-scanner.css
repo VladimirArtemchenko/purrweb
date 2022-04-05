@@ -1,0 +1,30 @@
+.id-scanner {
+    padding: 0 calc(100% - 1340px) 0 calc(100% - 1333px);
+    align-items: flex-end;
+    justify-content: space-between;
+    min-height: 1060px;
+    display: flex;
+    background: 0 0 url("../../images/gradient-id-scaner.svg") no-repeat,
+        0 25px url(../../images/id-scaner-main.png) no-repeat;
+    background-size: 100%,
+        100%;
+}
+
+@media screen and (max-width: 1439px) {
+    .id-scanner {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 1123px) {
+    .id-scanner {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .id-scanner {
+        background: 0 5px url(../../images/id-scaner-main-mobile.png) no-repeat;
+        background-size: 100%, 100%;
+    }
+}

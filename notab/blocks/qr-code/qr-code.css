@@ -1,0 +1,39 @@
+.qr-code {
+    z-index: 1;
+    position: relative;
+    padding: 0 57px 0 calc(100% - 1264px);
+    justify-content: space-between;
+    display: flex;
+    gap: calc(100% - 1126px);
+    background: 0% 0% url(../../images/gradient-qr-code.svg) no-repeat, 0% 0% url(../../images/qr-code1.png) no-repeat, 100% 0% url(../../images/qr-code2.png) no-repeat;
+    background-size: 130%, 53% 50%, 45% 50%;
+}
+
+@media screen and (max-width: 1280px) {
+    .qr-code {
+        padding: 0 50px 0 15px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .qr-code {
+        flex-direction: column;
+        background: 0% 0% url(../../images/gradient-qr-code-mobile.svg) no-repeat, 76% 0% url(../../images/qr-code1.png) no-repeat, 100% 69% url(../../images/qr-code2.png) no-repeat;
+        background-size: 100%, 100%, 100%;
+    }
+}
+/* @media screen and (max-width: 767px) {
+    .qr-code {
+        background: 100% 0% url(../../images/gradient-qr-code-mobile.svg) no-repeat, 76% 0% url(../../images/qr-code1.png) no-repeat, 95% 36% url(../../images/qr-code2.png) no-repeat;
+        background-size: 91%, 104%, 80%;
+
+    }
+} */
+
+@media screen and (max-width: 540px) {
+    .qr-code {
+        padding: 0;
+        background: 0% 0% url(../../images/gradient-qr-code-mobile.svg) no-repeat, 76% 0% url(../../images/qr-code1.png) no-repeat, 95% 36% url(../../images/qr-code2.png) no-repeat;
+        background-size: 100%, 100%, 80%;
+    }
+}

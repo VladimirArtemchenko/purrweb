@@ -1,0 +1,22 @@
+.stores_place_lead {
+    margin: 85px 0 0 157px;
+}
+
+@media screen and (max-width: 1290px) {
+    .stores_place_lead {
+        margin: 83px 0 0 calc(100% - 382px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .stores_place_lead {
+        justify-self: center;
+}
+}
+
+@media screen and (max-width: 450px) {
+    .stores_place_lead {
+        justify-self: start;
+        margin: 17px 0 0 calc(100% - 256px);
+}
+}

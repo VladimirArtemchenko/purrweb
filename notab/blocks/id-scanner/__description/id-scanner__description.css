@@ -1,0 +1,19 @@
+.id-scanner__description {
+    max-width: 60%;
+    margin: 0 0 0 auto;
+    max-width: 400px;
+}
+
+@media screen and (max-width: 1123px) {
+    .id-scanner__description {
+        margin: 0 auto 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .id-scanner__description {
+        margin: 227px 15px 0;
+        text-align: left;
+    }
+}

@@ -1,0 +1,11 @@
+.generate-qr-code__subtitle {
+    max-width: 291px;
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 767px) {
+    .generate-qr-code__subtitle {
+        max-width: 250px;
+        margin-top: 24px;
+    }
+}

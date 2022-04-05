@@ -1,0 +1,55 @@
+.longscroll__container {
+    width: 868px;
+    height: 1038px;
+    margin: 0 0 0px calc(100% - 1113px);
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    background: url(../../../images/iPhone-Longscroll.png) no-repeat;
+    background-size: 100%;
+}
+
+@media screen and (max-width: 1390px) {
+    .longscroll__container {
+        margin: 0 calc((100% - 868px)/2) 0px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .longscroll__container {
+        margin: 0 calc((100% - 868px)/2) 0px;
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .longscroll__container {
+        height: 592px;
+        width: 375px;
+        margin: 74px auto 0;
+        display: grid;
+        grid-template-areas:
+            "left ."
+            "top top"
+            ". ."
+            ". ."
+            ". ."
+            ". ."
+            ". ."
+            ". ."
+            ". ."
+            ". ."
+            ". ."
+            ". ."
+            "bottom right"
+            ". ."
+            ". ."
+            ". ."
+            ". ."
+            ". ."
+            ". ."
+            ". ."
+            ". .";
+        background: -7px 72px url(../../../images/iPhone-Longscroll-mobile.png) no-repeat;
+    }
+}

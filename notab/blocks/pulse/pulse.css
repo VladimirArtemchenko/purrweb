@@ -1,0 +1,32 @@
+.pulse {
+  opacity: 0.1;
+  animation: pulse 3s infinite alternate;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 0.1;
+  }
+
+  20% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.1;
+  }
+
+  20% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0.7;
+  }
+}

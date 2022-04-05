@@ -1,0 +1,22 @@
+.cookies-confirm__text {
+    color: white;
+    margin-left: 100px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .cookies-confirm__text {
+        margin-left: calc(100% - 884px);
+    }
+}
+
+
+@media screen and (max-width: 908px) {
+    .cookies-confirm__text {
+        margin-left: 15px;
+        font-size: 12px;
+        line-height: 16px;
+        max-width: 249px;
+        margin-right: 4px;
+    }
+}
