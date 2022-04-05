@@ -67,7 +67,7 @@ function hideCookiesBar() {
 
 window.addEventListener('scroll', function () {
     y = this.window.scrollY;
-    if (y >= 1100 && y <= 1193 && notConfirmed) {
+    if (y >= 1100 && y <= 1193 && notShowedCookiesBar) {
         showCookiesBar(start, finish);
     }
     if (y >= 1250 && y <= 1350 && width > 1023 && notShowedPhone) {
