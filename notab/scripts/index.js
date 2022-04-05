@@ -70,7 +70,7 @@ window.addEventListener('scroll', function () {
     if (y >= 1100 && y <= 1193 && notConfirmed) {
         showCookiesBar(start, finish);
     }
-    if (y >= 1350 && y <= 1450 && width > 1023 && notShowedPhone) {
+    if (y >= 1250 && y <= 1350 && width > 1023 && notShowedPhone) {
         showPhone();
     }
 });
