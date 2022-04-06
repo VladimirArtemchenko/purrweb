@@ -49,6 +49,17 @@ window.addEventListener('resize', init);
 document.querySelector('.control-button_nxt').addEventListener('click', rollSliderL);
 document.querySelector('.control-button_prev').addEventListener('click', rollSliderR);
 
+document.addEventListener('keyup', function(event) {
+    if (event.code == 'ArrowLeft') {
+        rollSliderR()
+    }
+  });
+document.addEventListener('keyup', function(event) {
+    if (event.code == 'ArrowRight') {
+        rollSliderL()
+    }
+  });
+
 function rollSliderL() {
     if (isThrottled) {
         return
