@@ -11,5 +11,6 @@
     .footer__links {
         gap: 14px;
         margin-bottom: 58px;
+        align-items: center;
     }
 }

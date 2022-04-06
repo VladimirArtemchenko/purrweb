@@ -25,6 +25,7 @@
 @media screen and (max-width: 868px) {
     .longscroll__container {
         height: 592px;
+        min-height: 592px;
         width: 375px;
         margin: 74px auto 0;
         display: grid;
