@@ -16,3 +16,19 @@
 @import url(../blocks/slider/__slide/slider__slide.css);
 @import url(../blocks/slider/__slider-line/slider__slider-line.css);
 @import url(../blocks/slider/__button-line/slider__button-line.css);
+
+
+
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__close-button/popup__close-button.css);
+@import url(../blocks/popup/__image/popup__image.css);
+@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__container/_type/popup__container_type_preview.css);
+@import url(../blocks/popup/__title/_type/popup__title_type_preview.css);
+@import url(../blocks/popup/_type/popup_type_preview.css);
+@import url(../blocks/popup/_opened/popup_opened.css);
+
+
+
+
