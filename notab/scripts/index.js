@@ -154,4 +154,3 @@ function showPhone() {
         }, 1)
     }
 }
-// проба тача
