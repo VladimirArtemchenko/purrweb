@@ -15,10 +15,6 @@
     color: #BFBFBF;
 }
 
-.form__input:invalid {
-    border: 2px solid #FF0000;
-}
-
 @media screen and (max-width: 868px) {
     .form__input {
         width: 345px;
