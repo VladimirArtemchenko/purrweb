@@ -1,6 +1,6 @@
 .longscroll__container {
     width: 868px;
-    height: 1038px;
+    min-height: 1038px;
     margin: 0 0 0px calc(100% - 1113px);
     display: flex;
     flex-direction: column;
