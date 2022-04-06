@@ -2,7 +2,7 @@
     align-self: center;
     padding: 18px 0 0 23px;
     width: 176px;
-    height: 65px;
+    min-height: 65px;
     margin: 0 0 0 -297px;
 }
 
@@ -10,7 +10,7 @@
     .longscroll__message_position_bottom {
         padding: 14px 0 0 15px;
         width: 107px;
-        height: 43px;
+        min-height: 43px;
         margin: 206px 0 0 29px;
         align-self: flex-start;
         grid-area: bottom;

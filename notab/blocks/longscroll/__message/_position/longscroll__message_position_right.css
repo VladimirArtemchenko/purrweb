@@ -2,7 +2,7 @@
     align-self: flex-end;
     padding: 18px 0 0 22px;
     width: 185px;
-    height: 91px;
+    min-height: 91px;
     margin: 167px -12px 0 0;
 }
 
@@ -16,7 +16,7 @@
     .longscroll__message_position_right {
         padding: 13px 0 0 19px;
         width: 122px;
-        height: 58px;
+        min-height: 58px;
         margin: 290px 0 0 33px;
         grid-area: right;
     }
