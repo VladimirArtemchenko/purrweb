@@ -1,11 +1,11 @@
 .eclipse_position_generate-qr-code {
     width: 1022px;
     height: 952px;
-    left: calc((100% - 1022px)/2);
+    left: calc((100% - 1042px)/2);
     top: -105px;
     border-radius: 476px;
     opacity: 0.15;
-    transform: rotate(-0.55deg);
+    transform: rotate(0);
 }
 
 @media screen and (max-width: 1023px) {
