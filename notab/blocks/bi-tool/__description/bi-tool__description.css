@@ -1,4 +1,5 @@
 .bi-tool__description {
+    z-index: 5;
     min-width: 497px;
     margin: 294px 0 0 0;
 }
