@@ -10,6 +10,35 @@ let isThrottled = false;
 let x = 0;
 let isStart = true;
 
+// Preview-----------------------------------------------------------------------------------------
+
+const preview = document.querySelector('.popup_type_preview');
+const previewImage = document.querySelector('.popup__image');
+const previewTitle = document.querySelector('.popup__title_type_preview');
+const closePreviewButton = document.querySelector('.popup__close-button_type_preview');
+const popup = document.querySelector(".popup");
+closePreviewButton.addEventListener('click', closePreviewButtonHandler);
+
+function previewHandler(evt) {
+    previewImage.src = evt.target.src;
+    previewImage.alt = evt.target.alt;
+    previewTitle.textContent = evt.target.alt;
+    openPopup(preview);
+}
+
+function openPopup(popup) {
+    popup.classList.add('popup_opened');
+}
+
+function closePopup(popup) {
+    popup.classList.remove('popup_opened');
+}
+
+function closePreviewButtonHandler() {
+    closePopup(preview);
+}
+
+//--------------------------------------------------------------------------------------------------------
 function renderSlides() {
     slider.forEach(item => {
         const img = template.querySelector('.slider__slide').cloneNode(true);
@@ -20,6 +49,7 @@ function renderSlides() {
         choiceButton.addEventListener('click', check);
         choiceButtonLine.append(choiceButton);
         sliderLine.append(img);
+        img.addEventListener('click', previewHandler);
     });
     buttons = document.querySelectorAll('.button');
 }

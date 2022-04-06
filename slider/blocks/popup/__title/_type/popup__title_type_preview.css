@@ -1,0 +1,17 @@
+.popup__title_type_preview {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+    color: white;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    margin: 10px 0 0 0;
+}
+@media screen and (max-width: 767px) {
+    .popup__title_type_preview {
+        font-size: 18px;
+        line-height: 22px;
+        margin: 10px 0 0 0;
+    }
+}
