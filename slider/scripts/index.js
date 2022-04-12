@@ -41,7 +41,6 @@ function closePopup(popup) { /*Функция закрытия попапа*/
 // Функция открытия попапа----------------------------------------------------------------------------------------------
 
 function closePreviewButtonHandler() {
-    ч
     closePopup(preview);
 }
 
