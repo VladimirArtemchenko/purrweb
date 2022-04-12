@@ -3,20 +3,20 @@ const sliderLine = document.querySelector('.slider__slider-line');
 const template = document.querySelector('#template').content;
 const choiceButtonLine = document.querySelector('.slider__button-line');
 let buttons;
-let count = 0;
+const duration = 500;
 let width;
-const step = 5;
 let isThrottled = false;
 let x = 0;
-let isStart = true;
-
+let direction;
+const controlButtons = Array.from(document.querySelectorAll('.button_type_control'));
+let multiplier = 1;
+let currentSlide = 0;
 // Preview доп-------------------------------------------------------------------------------------------
 
 const preview = document.querySelector('.popup_type_preview');
 const previewImage = document.querySelector('.popup__image');
 const previewTitle = document.querySelector('.popup__title_type_preview');
 const closePreviewButton = document.querySelector('.popup__close-button_type_preview');
-const popup = document.querySelector(".popup");
 closePreviewButton.addEventListener('click', closePreviewButtonHandler);
 
 function previewHandler(evt) {
@@ -38,154 +38,116 @@ function closePreviewButtonHandler() {
     closePopup(preview);
 }
 
-//--------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
 function renderSlides() {
-    slider.forEach(item => {
+    slider.forEach((item, index) => {
         const img = template.querySelector('.slider__slide').cloneNode(true);
         const choiceButton = template.querySelector('.button_type_choice').cloneNode(true);
         img.src = item.link;
         img.alt = item.name;
-        choiceButton.name = item.number
+        img.id = index;
+        choiceButton.id = index;
         choiceButton.addEventListener('click', check);
         choiceButtonLine.append(choiceButton);
         sliderLine.append(img);
         img.addEventListener('click', previewHandler);
     });
     buttons = document.querySelectorAll('.button');
+
+    controlButtons.forEach(button => {
+        button.addEventListener('click', function (evt) {
+            let target = evt.target;
+            if (isThrottled) {
+                return
+            } else {
+                if (target.classList.contains('control-button_nxt')) {
+                    multiplier = 1;
+                    direction = "left"
+                } else if (target.classList.contains('control-button_prev')) {
+                    multiplier = 1;
+                    direction = "right"
+                } else {
+                    return;
+                }
+                rollSlider(multiplier, direction);
+            }
+        });
+    });
 }
 
+//----------------------------------------------------------------------------------------------------------------------
 
-renderSlides()
+renderSlides();
 
+//----------------------------------------------------------------------------------------------------------------------
 function init() {
     width = document.querySelector('.slider').offsetWidth;
     images = document.querySelectorAll('.slider__slide');
     choiceButton = document.querySelectorAll('.button_type_choice');
-    choiceButton[count].classList.add('button_type_active');
+    choiceButton[currentSlide].classList.add('button_type_active');
     images.forEach(item => {
         item.style.width = width + 'px';
     });
-    if (images.length - 1 == 0) {
+    if (images.length - 1 === 0) {
         buttons.forEach(item => item.setAttribute("disabled", "disabled"));
     }
-    x=count*width
-    sliderLine.style.transform = 'translate(-' + x + 'px)';
-    sliderLine.style.width = width * images.length + 'px';
+    console.log(width)
+    // x = count * width
+    // sliderLine.style.transform = 'translate(-' + 0 + 'px)';
+    // sliderLine.style.width = width * images.length + 'px';
 
 }
 
+//----------------------------------------------------------------------------------------------------------------------
 init();
-
+//----------------------------------------------------------------------------------------------------------------------
 window.addEventListener('resize', init);
-document.querySelector('.control-button_nxt').addEventListener('click', rollSliderL);
-document.querySelector('.control-button_prev').addEventListener('click', rollSliderR);
-
-document.addEventListener('keyup', function(event) {
-    if (event.code == 'ArrowLeft') {
-        rollSliderR()
+//----------------------------------------------------------------------------------------------------------------------
+document.addEventListener('keyup', function (event) {
+    if (event.code === 'ArrowLeft') {
+        multiplier = 1;
+        direction = "left"
+        rollSlider(multiplier, direction)
     }
-  });
-document.addEventListener('keyup', function(event) {
-    if (event.code == 'ArrowRight') {
-        rollSliderL()
+    if (event.code === 'ArrowRight') {
+        multiplier = 1;
+        direction = "right"
+        rollSlider(multiplier, direction)
     }
-  });
+});
 
-
-function rollSliderL() {
-    if (isThrottled) {
-        return
-    } else {
-        choiceButton[count].classList.remove('button_type_active');
-        count++
-        if (count >= images.length) {
-            choiceButton[0].classList.add('button_type_active');
-            count = 1;
-            x = 0
-            sliderLine.style.transform = 'translate(-' + x + 'px)';
-            images.forEach(function (item, index) {
-                if (index < (images.length - 1)) {
-                    sliderLine.append(item);
-                }
-            })
-            images = document.querySelectorAll('.slider .slider__slider-line img');
-            let timer = setInterval(function () {
-                if (count * width >= x + step) {
-                    x += step;
-                    sliderLine.style.transform = 'translate(-' + x + 'px)';
-                    isThrottled = true;
-                } else {
-                    clearInterval(timer);
-                    reset(true);
-                    return
-                }
-            }, 1);
-        } else {
-            let timer = setInterval(function () {
-                choiceButton[count].classList.add('button_type_active');
-                if (count * width >= x + step) {
-                    x += step;
-                    sliderLine.style.transform = 'translate(-' + x + 'px)';
-                    isThrottled = true;
-                } else {
-                    x = count * width
-                    sliderLine.style.transform = 'translate(-' + x + 'px)';
-                    clearInterval(timer);
-                    isThrottled = false;
-                }
-            }, 1);
-        }
-    }
+//----------------------------------------------------------------------------------------------------------------------
+function rollSlider(multiplier, direction) {
+    isThrottled = true
+    insertSlide(direction);
+    animate({multiplier, direction, roll});
 }
 
-function rollSliderR() {
-    if (isThrottled) {
-        return
-    } else {
-        choiceButton[count].classList.remove('button_type_active');
-        count--;
-        if (count < 0) {
-            count = images.length - 1;
-            choiceButton[count].classList.add('button_type_active');
-            x = width * count
-            sliderLine.style.transform = 'translate(-' + x + 'px)';
-
-            images.forEach(function (item, index) {
-                if (index < (images.length - 1)) {
-                    sliderLine.append(item);
-                }
-            })
-            x = width
-            sliderLine.style.transform = 'translate(-' + x + 'px)';
-            images = document.querySelectorAll('.slider__slide');
-            count = 0
-            let timer = setInterval(function () {
-                if (count * width <= x + step) {
-                    x -= step;
-                    sliderLine.style.transform = 'translate(-' + x + 'px)';
-                    isThrottled = true;
-                } else {
-                    clearInterval(timer);
-                    reset(false);
-                    return
-                }
-            }, 1);
-        } else {
-            let timer = setInterval(function () {
-                choiceButton[count].classList.add('button_type_active');
-                if (count * width <= x - step) {
-                    x -= step;
-                    sliderLine.style.transform = 'translate(-' + x + 'px)';
-                    isThrottled = true;
-                } else {
-                    x = count * width;
-                    sliderLine.style.transform = 'translate(-' + x + 'px)';
-                    clearInterval(timer);
-                    isThrottled = false;
-                    return
-                }
-            }, 1);
+function animate({multiplier, direction, roll}) {
+    let start = performance.now();
+    requestAnimationFrame(function animate(time) {
+        let timeFraction = (time - start) / duration;
+        if (timeFraction > 1) {
+            timeFraction = 1;
+            roll(multiplier, direction, timeFraction);
+            deleteSlide(direction);
+            currentSlide = images[0].id;
+            isThrottled = false;
+            return
         }
+        roll(multiplier, direction, timeFraction);
+        if (timeFraction < 1) {
+            requestAnimationFrame(animate);
+        }
+    });
+}
+
+function roll(multiplier, direction, timeFraction) {
+    if (direction === 'left') {
+        sliderLine.style.transform = 'translate(-' + timeFraction * width * multiplier + 'px)';
+    }
+    if (direction === 'right') {
+        sliderLine.style.transform = 'translate(-' + (width - timeFraction * width) * multiplier + 'px)';
     }
 }
 
@@ -193,36 +155,50 @@ function check(evt) {
     if (isThrottled) {
         return
     } else {
-        if (evt.target.name == count) {
-            return
-        } else {
-            choiceButton[count].classList.remove('button_type_active');
-            let newCount = evt.target.name;
-            if (newCount > count) {
-                count = +newCount - 1
-                rollSliderL(count);
-            } else if (newCount < count) {
-                count = +newCount + 1
-                rollSliderR(count);
-            }
+        isThrottled = true
+        if (evt.target.id > currentSlide) {
+            multiplier = evt.target.id - currentSlide
+            direction = 'left';
+            rollSlider(multiplier, direction)
+        }
+        if (evt.target.id < currentSlide) {
+            multiplier = currentSlide - evt.target.id
+            direction = 'right';
+            rollSlider(multiplier, direction)
         }
     }
 }
 
-function reset(isStart) {
-    if (isStart) {
-        isThrottled = false;
-        x = 0;
-        sliderLine.append(images[count - 1]);
-        sliderLine.style.transform = 'translate(-' + x + 'px)';
-        images = document.querySelectorAll('.slider__slide');
-        count = 0;
-    } else {
-        isThrottled = false;
-        count = images.length - 1;
-        x = count * width;
-        sliderLine.append(images[0]);
-        sliderLine.style.transform = 'translate(-' + x + 'px)';
-        images = document.querySelectorAll('.slider__slide');
+function insertSlide(direction) {
+    for (let i = 0; i < multiplier; ++i) {
+        if (direction === 'left') {
+            choiceButton[(images[i].id)].classList.remove('button_type_active');
+            choiceButton[(images[1 + i].id)].classList.add('button_type_active');
+            const copy = images[i].cloneNode(true);
+            sliderLine.append(copy);
+            sliderLine.style.transform = 'translate(-' + 0 + 'px)';
+            images = document.querySelectorAll('.slider__slide');
+        }
+        if (direction === 'right') {
+            choiceButton[(images[0].id)].classList.remove('button_type_active');
+            choiceButton[(images[images.length - 1 - i].id)].classList.add('button_type_active');
+            const copy = images[images.length - 1 - i].cloneNode(true);
+            sliderLine.prepend(copy);
+            sliderLine.style.transform = 'translate(-' + width + 'px)';
+            images = document.querySelectorAll('.slider__slide');
+        }
     }
+}
+
+function deleteSlide(direction) {
+    for (let i = 0; i < multiplier; ++i) {
+        if (direction === 'left') {
+            images[i].remove();
+        }
+        if (direction === 'right') {
+            images[images.length - 1 - i].remove();
+        }
+    }
+    sliderLine.style.transform = 'translate(-' + 0 + 'px)';
+    images = document.querySelectorAll('.slider__slide');
 }
