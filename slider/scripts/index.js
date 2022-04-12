@@ -191,6 +191,7 @@ function insertSlide(direction) {
             choiceButton[(images[1 + i].id)].classList.add('button_type_active');
             const copy = images[i].cloneNode(true);
             sliderLine.append(copy);
+            copy.addEventListener('click', previewHandler);
             sliderLine.style.transform = 'translate(-' + 0 + 'px)';
             images = document.querySelectorAll('.slider__slide');
         }
@@ -199,6 +200,7 @@ function insertSlide(direction) {
             choiceButton[(images[images.length - 1 - i].id)].classList.add('button_type_active');
             const copy = images[images.length - 1 - i].cloneNode(true);
             sliderLine.prepend(copy);
+            copy.addEventListener('click', previewHandler);
             sliderLine.style.transform = 'translate(-' + width + 'px)';
             images = document.querySelectorAll('.slider__slide');
         }
@@ -219,3 +221,5 @@ function deleteSlide(direction) {
     sliderLine.style.transform = 'translate(-' + 0 + 'px)';
     images = document.querySelectorAll('.slider__slide');
 }
+
+//-----------------------------------------------------------------------------------------------------------------------
