@@ -10,7 +10,7 @@ let isThrottled = false;
 let x = 0;
 let isStart = true;
 
-// Preview доп-----------------------------------------------------------------------------------------
+// Preview доп-------------------------------------------------------------------------------------------
 
 const preview = document.querySelector('.popup_type_preview');
 const previewImage = document.querySelector('.popup__image');
