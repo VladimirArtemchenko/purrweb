@@ -159,6 +159,8 @@ function checkSlide(evt) {
             multiplier = currentSlide - evt.target.id
             direction = 'right';
             rollSlider(multiplier, direction)
+        }else {
+            isThrottled = false
         }
     }
 }
