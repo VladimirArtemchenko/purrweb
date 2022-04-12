@@ -6,19 +6,20 @@ let buttons;
 const duration = 500;
 let width;
 let isThrottled = false;
-let x = 0;
 let direction;
 const controlButtons = Array.from(document.querySelectorAll('.button_type_control'));
 let multiplier = 1;
 let currentSlide = 0;
 
-// Preview доп-------------------------------------------------------------------------------------------
+// Preview доп----------------------------------------------------------------------------------------------------------
 
 const preview = document.querySelector('.popup_type_preview');
 const previewImage = document.querySelector('.popup__image');
 const previewTitle = document.querySelector('.popup__title_type_preview');
 const closePreviewButton = document.querySelector('.popup__close-button_type_preview');
 closePreviewButton.addEventListener('click', closePreviewButtonHandler);
+
+// Функция отображения попапа с текущим слайдом-------------------------------------------------------------------------
 
 function previewHandler(evt) {
     previewImage.src = evt.target.src;
@@ -27,19 +28,25 @@ function previewHandler(evt) {
     openPopup(preview);
 }
 
+// Функция открытия попапа----------------------------------------------------------------------------------------------
+
 function openPopup(popup) {
     popup.classList.add('popup_opened');
 }
 
-function closePopup(popup) {
+function closePopup(popup) { /*Функция закрытия попапа*/
     popup.classList.remove('popup_opened');
 }
 
+// Функция открытия попапа----------------------------------------------------------------------------------------------
+
 function closePreviewButtonHandler() {
+    ч
     closePopup(preview);
 }
 
-//Функция рендера колекции слайдов
+//Функция рендера колекции слайдов--------------------------------------------------------------------------------------
+
 function renderSlides() {
     slider.forEach((item, index) => {
         const img = template.querySelector('.slider__slide').cloneNode(true);
@@ -78,7 +85,7 @@ function renderSlides() {
 
 renderSlides();
 
-//----------------------------------------------------------------------------------------------------------------------
+//Функция настройки слайдера под ширину экрана--------------------------------------------------------------------------
 function init() {
     width = document.querySelector('.slider').offsetWidth;
     images = document.querySelectorAll('.slider__slide');
@@ -90,32 +97,39 @@ function init() {
     if (images.length - 1 === 0) {
         buttons.forEach(item => item.setAttribute("disabled", "disabled"));
     }
-    console.log(width)
 }
 
 init();
-//----------------------------------------------------------------------------------------------------------------------
+
 window.addEventListener('resize', init);
-//----------------------------------------------------------------------------------------------------------------------
+
+//Слушатели для управления слайдером с клавиатуры-----------------------------------------------------------------------
+
 document.addEventListener('keyup', function (event) {
-    if (event.code === 'ArrowLeft') {
-        multiplier = 1;
-        direction = "left"
-        rollSlider(multiplier, direction)
-    }
-    if (event.code === 'ArrowRight') {
-        multiplier = 1;
-        direction = "right"
-        rollSlider(multiplier, direction)
+    if (isThrottled) {
+        return
+    } else {
+        if (event.code === 'ArrowLeft') {
+            multiplier = 1;
+            direction = "right"
+            rollSlider(multiplier, direction)
+        }
+        if (event.code === 'ArrowRight') {
+            multiplier = 1;
+            direction = "left"
+            rollSlider(multiplier, direction)
+        }
     }
 });
 
-//----------------------------------------------------------------------------------------------------------------------
+//Прокрутки слайдера----------------------------------------------------------------------------------------------------
 function rollSlider(multiplier, direction) {
     isThrottled = true
     insertSlide(direction);
     animate({multiplier, direction, roll});
 }
+
+//Функция анимации прокрутки слайдера-----------------------------------------------------------------------------------
 
 function animate({multiplier, direction, roll}) {
     let start = performance.now();
@@ -136,6 +150,8 @@ function animate({multiplier, direction, roll}) {
     });
 }
 
+//Функция отрисовки одного кадра сдвижки--------------------------------------------------------------------------------
+
 function roll(multiplier, direction, timeFraction) {
     if (direction === 'left') {
         sliderLine.style.transform = 'translate(-' + timeFraction * width * multiplier + 'px)';
@@ -144,6 +160,8 @@ function roll(multiplier, direction, timeFraction) {
         sliderLine.style.transform = 'translate(-' + (width - timeFraction * width) * multiplier + 'px)';
     }
 }
+
+//Функция переключения слайдов с помшью радио-кнопок--------------------------------------------------------------------
 
 function checkSlide(evt) {
     if (isThrottled) {
@@ -159,11 +177,13 @@ function checkSlide(evt) {
             multiplier = currentSlide - evt.target.id
             direction = 'right';
             rollSlider(multiplier, direction)
-        }else {
+        } else {
             isThrottled = false
         }
     }
 }
+
+//Функция вставки слайдов-----------------------------------------------------------------------------------------------
 
 function insertSlide(direction) {
     for (let i = 0; i < multiplier; ++i) {
@@ -185,6 +205,8 @@ function insertSlide(direction) {
         }
     }
 }
+
+//Функция удаления слайдов-----------------------------------------------------------------------------------------------
 
 function deleteSlide(direction) {
     for (let i = 0; i < multiplier; ++i) {
