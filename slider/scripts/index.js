@@ -11,6 +11,7 @@ let direction;
 const controlButtons = Array.from(document.querySelectorAll('.button_type_control'));
 let multiplier = 1;
 let currentSlide = 0;
+
 // Preview доп-------------------------------------------------------------------------------------------
 
 const preview = document.querySelector('.popup_type_preview');
@@ -38,7 +39,7 @@ function closePreviewButtonHandler() {
     closePopup(preview);
 }
 
-//----------------------------------------------------------------------------------------------------------------------
+//Функция рендера колекции слайдов
 function renderSlides() {
     slider.forEach((item, index) => {
         const img = template.querySelector('.slider__slide').cloneNode(true);
@@ -47,7 +48,7 @@ function renderSlides() {
         img.alt = item.name;
         img.id = index;
         choiceButton.id = index;
-        choiceButton.addEventListener('click', check);
+        choiceButton.addEventListener('click', checkSlide);
         choiceButtonLine.append(choiceButton);
         sliderLine.append(img);
         img.addEventListener('click', previewHandler);
@@ -75,8 +76,6 @@ function renderSlides() {
     });
 }
 
-//----------------------------------------------------------------------------------------------------------------------
-
 renderSlides();
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -92,13 +91,8 @@ function init() {
         buttons.forEach(item => item.setAttribute("disabled", "disabled"));
     }
     console.log(width)
-    // x = count * width
-    // sliderLine.style.transform = 'translate(-' + 0 + 'px)';
-    // sliderLine.style.width = width * images.length + 'px';
-
 }
 
-//----------------------------------------------------------------------------------------------------------------------
 init();
 //----------------------------------------------------------------------------------------------------------------------
 window.addEventListener('resize', init);
@@ -151,7 +145,7 @@ function roll(multiplier, direction, timeFraction) {
     }
 }
 
-function check(evt) {
+function checkSlide(evt) {
     if (isThrottled) {
         return
     } else {
